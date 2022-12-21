@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #001300;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.container span {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  animation: animateColor 5s linear infinite;
+}
+
+@keyframes animateColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.container span::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: #00f00a;
+  border-radius: 50%;
+  transition: 1s;
+  transform: scale(0);
+  box-shadow: 0 0 10px #00f00a, 0 0 20px #00f00a, 0 0 40px #00f00a, 0 0 60px #00f00a, 0 0 80px #00f00a, 0 0 100px #00f00a;
+}
+
+.container span:hover::before {
+  transition: 0s;
+  transform: scale(1);
+}

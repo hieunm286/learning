@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+  gap: 20px
+}
+
+#original {
+  width: 50%;
+  overflow: hidden;
+  border: 1px solid #09c6f9;
+  padding: 10px
+}
+
+#after-convert {
+  width: 50%;
+  overflow: hidden;
+  border: 1px solid #09c6f9;
+  padding: 10px
+}
+
+.string { color: green; }
+.number { color: blue; }
+.boolean { color: darkorange; }
+.null { color: magenta; }
+.key { color: red; }
